@@ -1,0 +1,40 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead >
+            <tr>
+                <th scope="col">Volver</th>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Link Descarga</th>
+                <th scope="col">Fecha Publicación</th>
+                <th scope="col">N° Páginas</th>
+                <th scope="col">Lenguaje</th>
+                <th scope="col">Imagen</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of libro">
+                <th>
+                    <button class="btn btn-primary" (click)="Libroback()">
+                        <i class="fa fa-undo"></i>
+                    </button>
+                </th>
+                <th scope="row">{{item.ID}}</th>
+                <th>{{item.title}}</th>
+                <th>{{item.author}}</th>
+                <th>
+                    <a href="item.url_download">{{item.url_download}}</a>
+                </th>
+                <th>{{item.publisher_date}}</th>
+                <th>{{item.pages}}</th>
+                <th>{{item.language}}</th>
+                <th>
+                    <img src="{{item.cover}}" alt="" style="width: 60%;">
+                </th>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
